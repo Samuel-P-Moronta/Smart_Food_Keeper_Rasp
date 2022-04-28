@@ -1,0 +1,10 @@
+[Unit]
+Description=My Shell Script
+After=multi-user.target
+
+[Service]
+ExecStartPre=/bin/sleep 30
+ExecStart=/home/pi/Desktop/camera.sh
+
+[Install]
+WantedBy=multi-user.target

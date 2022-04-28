@@ -1,0 +1,11 @@
+[Unit]
+Description=launch service for project SMF
+After=multi-user.target
+
+[Service]
+ExecStartPre=/bin/sleep 30
+ExecStart=/usr/bin/python3 /home/pi/Desktop/Testing/Smart-Food-Keeper/WebApp_Smart_Food_Keeper/src/main/java/WEBAPP_SFK/webservices/WebSocketClient.py
+User=pi
+
+[Install]
+WantedBy=multi-user.target
